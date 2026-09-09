@@ -35,3 +35,34 @@ memory-safety or reliability failures.
 
 Before adding a header length to a payload length, reject values that would
 overflow `size_t`; only allocate after the checked total is known.
+
+See also the `size_t_*.c` examples in 01-memory-and-ownership/ .
+
+## 1.3 Use "array index" syntax form rather than raw pointer arithmetic when dereferencing
+
+Instead of `*(my_pointer+3)`, use `my_pointer[3]`. 
+
+### Rationale
+
+The actual arithmetic behind `my_pointer+3` when broken down to raw 
+numbers works out to something more like 
+`my_pointer+(sizeof(*my_pointer)*3)`. This is _surprising as hell_,
+especially to newcomers. As it turns out, array index access does
+basically the same thing (including the dereference), but doesn't
+quietly rewrite an entire addend in the process.
+
+### Example
+
+#### Bad
+
+`*(my_pointer+3)`
+
+#### Good
+
+`my_pointer[3]`
+
+#### Exception
+
+`my_pointer+3` _only_ if you're storing that address in
+particular and not immediately dereferencing it. This tends
+to be pretty rare, but 
