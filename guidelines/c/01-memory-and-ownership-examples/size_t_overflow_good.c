@@ -8,9 +8,9 @@ int main(int argc, char *argv[]) {
   size_t wontOverflowSize;
   size_t reqSize;
 
-  someOtherSize = SIZE_MAX-5;
-  wontOverflowSize = SIZE_MAX-6;
   reqSize = 6;
+  someOtherSize = SIZE_MAX - (reqSize - 1);
+  wontOverflowSize = SIZE_MAX - reqSize;
 
   printf("reqSize before overflow addition: %lu\n", reqSize);
   printf("SIZE_MAX = %lu\n", SIZE_MAX);
