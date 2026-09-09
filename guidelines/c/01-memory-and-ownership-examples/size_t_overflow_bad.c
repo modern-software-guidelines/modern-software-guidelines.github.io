@@ -4,15 +4,15 @@
 #include <stdint.h>
 
 int main(int argc, char *argv[]) {
-  size_t someOtherSize;
-  size_t reqSize;
+  size_t some_other_size;
+  size_t req_size;
 
-  someOtherSize = SIZE_MAX-5;
-  reqSize = 6;
+  some_other_size = SIZE_MAX-5;
+  req_size = 6;
 
-  printf("reqSize before overflow addition: %ld\n", reqSize);
+  printf("req_size before overflow addition: %ld\n", req_size);
 
-  reqSize += someOtherSize;
+  req_size += some_other_size;
 
-  printf("reqSize after overflow addition: %ld\n", reqSize);
+  printf("req_size after overflow addition: %ld\n", req_size);
 }
