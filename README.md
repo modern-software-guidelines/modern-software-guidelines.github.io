@@ -1,6 +1,6 @@
 # Modern Software Authoring Guidelines
 
-A Markdown-first starter site for a concise, practical set of software-authoring
+A Markdown-first site for a concise, practical set of software-authoring
 guidelines. It uses GitHub Pages' built-in Jekyll support, so publishing needs
 no build service or generated files.
 
