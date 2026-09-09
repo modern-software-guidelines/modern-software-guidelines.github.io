@@ -20,7 +20,7 @@ guidelines/
   general/
     index.md
     01-understand-the-problem.md
-    02-design-for-people.md
+    02-design-software-for-people.md
     03-build-and-maintain.md
   c/
     index.md
