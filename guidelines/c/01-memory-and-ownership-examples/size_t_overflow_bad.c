@@ -10,9 +10,9 @@ int main(int argc, char *argv[]) {
   some_other_size = SIZE_MAX-5;
   req_size = 6;
 
-  printf("req_size before overflow addition: %ld\n", req_size);
+  printf("req_size before overflow addition: %lu\n", req_size);
 
   req_size += some_other_size;
 
-  printf("req_size after overflow addition: %ld\n", req_size);
+  printf("req_size after overflow addition: %lu\n", req_size);
 }
