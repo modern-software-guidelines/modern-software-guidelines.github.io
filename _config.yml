@@ -1,0 +1,14 @@
+title: Modern Software Authoring Guidelines
+description: Practical principles for building software.
+markdown: kramdown
+permalink: pretty
+
+navigation:
+  - title: Home
+    url: /
+  - title: General guidelines
+    url: /guidelines/general/
+  - title: C
+    url: /guidelines/c/
+  - title: Rust
+    url: /guidelines/rust/
